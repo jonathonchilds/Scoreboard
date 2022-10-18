@@ -1,7 +1,7 @@
 import './style.css'
 //                                  ||||||
 // reads from section.team only    \/\/\/
-const inputElements = document.querySelectorAll('input' && 'section.team1') 
+const inputElements = document.querySelectorAll('input') 
 
 //                             ||||||
 // updates section.team1, h2    \/\/\/
