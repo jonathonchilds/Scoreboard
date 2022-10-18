@@ -73,6 +73,14 @@ fieldset i.add {
   color: #45f6e5;
 }
 
+button.reset {
+  border-width: 1rem;
+  border: 1px solid whitesmoke;
+  border-radius: 1rem;
+  cursor: pointer;
+  margin: 0.5rem;
+}
+
 fieldset i.subtract {
   cursor: pointer;
   color: #82068e;
