@@ -70,10 +70,11 @@ fieldset i {
 
 fieldset i.add {
   cursor: pointer;
-  color: #760080;
+  color: #45f6e5;
 }
 
 fieldset i.subtract {
   cursor: pointer;
-  color: #45f6e5;
+  color: #82068e;
+  
 }
