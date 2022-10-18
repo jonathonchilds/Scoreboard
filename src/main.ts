@@ -24,7 +24,6 @@ function teamContent(id: string)
     {
       teamNameDisplay.innerText = (event.target as HTMLInputElement).value
     }
-  
     teamNameInputBox.addEventListener('input', updateTeamName)
 
 
@@ -37,7 +36,6 @@ function teamContent(id: string)
       }
       else teamScoreCounter = teamScoreCounter
     }
-  
     incrementScoreButton.addEventListener('click', incrementScore)
 
 
@@ -50,7 +48,6 @@ function teamContent(id: string)
       }
       else teamScoreCounter = teamScoreCounter
     }
-  
     decreaseScoreButton.addEventListener('click', decreaseScore)
 
 
@@ -59,10 +56,8 @@ function teamContent(id: string)
       teamScoreCounter = 0
       teamScoreDisplay.textContent = `${teamScoreCounter}`
     }
-  
     resetScoreButton.addEventListener('click', resetScore)
-
-
+    
 }
 
 teamContent('team1')
