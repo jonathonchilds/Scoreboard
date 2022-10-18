@@ -7,14 +7,12 @@ function setupTeam(id: string)
   
   function updatePlayerName(event: Event) 
   {
-    const changeName = event.target as HTMLInputElement  
-    playerNameDisplay.innerText = changeName.value
+    playerNameDisplay.innerText = (event.target as HTMLInputElement).value
   };
 
   playerNameInput.addEventListener('input', updatePlayerName)
 
 }
-
 setupTeam('team1')
 setupTeam('team2')
 
