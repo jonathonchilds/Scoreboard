@@ -1,20 +1,36 @@
 import './style.css'
 
-function setupTeam(id: string)
+function teamContent(id: string)
 {
-  const playerNameInput = document.querySelector(`.${id} input`) as HTMLInputElement;
-  const playerNameDisplay = document.querySelector(`.${id} h2`) as HTMLInputElement;
+  let teamScoreCounter = 0;
+  // INPUTS  |
+  //         |
+  //         V
+  const teamNameInputBox = document.querySelector(`.${id} input`) as HTMLInputElement;
+  const incrementScoreButton = document.querySelector(`.${id} .add`) as HTMLElement
   
-  function updatePlayerName(event: Event) 
-  {
-    playerNameDisplay.innerText = (event.target as HTMLInputElement).value
-  };
+  // OUTPUTS  |
+  //          |
+  //          V
+  const teamNameDisplay = document.querySelector(`.${id} h2`) as HTMLInputElement;
+  const teamScoreDisplay = document.querySelector(`.${id} h3`) as HTMLHeadingElement
 
-  playerNameInput.addEventListener('input', updatePlayerName)
+  function updateTeamName(event: Event) 
+  {
+    teamNameDisplay.innerText = (event.target as HTMLInputElement).value
+  };
+  teamNameInputBox.addEventListener('input', updateTeamName)
+
+  function incrementScore()
+  {
+    teamScoreCounter = teamScoreCounter + 1;
+    teamScoreDisplay.textContent = `${teamScoreCounter}`
+  }
+  incrementScoreButton.addEventListener('click', incrementScore)
 
 }
-setupTeam('team1')
-setupTeam('team2')
+teamContent('team1')
+teamContent('team2')
 
 
 
