@@ -28,16 +28,24 @@ function teamContent(id: string)
 
   function incrementScore()
   {
-    teamScoreCounter = teamScoreCounter + 1
-    teamScoreDisplay.textContent = `${teamScoreCounter}`
+    if (teamScoreCounter < 21)
+    {
+      teamScoreCounter = teamScoreCounter + 1
+      teamScoreDisplay.textContent = `${teamScoreCounter}`
+    }
+    else teamScoreCounter = teamScoreCounter
   }
   incrementScoreButton.addEventListener('click', incrementScore)
 
 
   function decreaseScore()
   {
+    if (teamScoreCounter > 0)
+    {
     teamScoreCounter = teamScoreCounter - 1
     teamScoreDisplay.textContent = `${teamScoreCounter}`
+    }
+    else teamScoreCounter = teamScoreCounter
   }
   decreaseScoreButton.addEventListener('click', decreaseScore)
 
