@@ -5,32 +5,18 @@ function setupTeam(id: string)
   const playerNameInput = document.querySelector(`.${id} input`) as HTMLInputElement;
   const playerNameDisplay = document.querySelector(`.${id} h2`) as HTMLInputElement;
   
-
-  function updateParagraph(event: Event) 
+  function updatePlayerName(event: Event) 
   {
-    const elementChanged = event.target
-    if (elementChanged instanceof HTMLInputElement && 
-        playerNameDisplay instanceof HTMLHeadingElement) 
-      {
-        const currentInputValue = elementChanged.value
-        playerNameDisplay.innerText = currentInputValue
-      // if (elementChanged)
-      // {
-      //   playerNameDisplay.innerText = currentInputValue
-      // }
-      // if (elementChanged)
-      // {
-      //   const currentInputValue = elementChanged.value
-      //   team2Name.innerText = currentInputValue
-      // }
-      }
+    const changeName = event.target as HTMLInputElement  
+    playerNameDisplay.innerText = changeName.value
   };
 
-  // playerNameInput.forEach((element) => 
-  // element.addEventListener('input', updateParagraph));
+  playerNameInput.addEventListener('input', updatePlayerName)
+
+}
 
 setupTeam('team1')
 setupTeam('team2')
 
-}
+
 
